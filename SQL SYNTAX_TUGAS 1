@@ -50,3 +50,14 @@ MariaDB [eduwork]> select name,phone,address from users where name='Bima';
 | Bima | 08666639998 | Maluku  |
 +------+-------------+---------+
 
+select with alias :
+MariaDB [eduwork]> select name as nm,phone as phone_number,address as adrss from users;
++------+--------------+---------+
+| nm   | phone_number | adrss   |
++------+--------------+---------+
+| Ayu  | 08198890018  | Jakarta |
+| Ana  | 08191230018  | Jakarta |
+| Abi  | 08191239998  | Medan   |
+| Bima | 08666639998  | Maluku  |
+| caka | 08611111998  | Bekasi  |
++------+--------------+---------+
