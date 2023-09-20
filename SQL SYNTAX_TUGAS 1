@@ -42,5 +42,11 @@ MariaDB [eduwork]> select name,phone,address from users;
 | caka | 08611111998 | Bekasi  |
 +------+-------------+---------+
 
-
+select name, phone, address from table users where name='Bima' :
+MariaDB [eduwork]> select name,phone,address from users where name='Bima';
++------+-------------+---------+
+| name | phone       | address |
++------+-------------+---------+
+| Bima | 08666639998 | Maluku  |
++------+-------------+---------+
 
