@@ -1,0 +1,46 @@
+create database :
+MariaDB [(none)]> create database eduwork;
+
+create table :
+MariaDB [eduwork]> create table users(
+    -> user_id varchar(6),
+    -> name varchar (20),
+    -> email varchar(20),
+    -> phone varchar(12),
+    -> gender varchar(6),
+    -> address varchar(10));
+
+insert data :
+MariaDB [eduwork]> insert into users values
+    -> ('A001','Ayu','ayu@gmail.com','08198890018','female','Jakarta'),
+    -> ('A002','Ana','ana@gmail.com','08191230018','female','Jakarta'),
+    -> ('A003','Abi','abi@gmail.com','08191239998','male','Medan'),
+    -> ('A004','Bima','bima@gmail.com','08666639998','male','Maluku'),
+    -> ('A005','caka','caka@gmail.com','08611111998','male','Bekasi');
+
+select data from table users :
+MariaDB [eduwork]> select*from users;
++---------+------+----------------+-------------+--------+---------+
+| user_id | name | email          | phone       | gender | address |
++---------+------+----------------+-------------+--------+---------+
+| A001    | Ayu  | ayu@gmail.com  | 08198890018 | female | Jakarta |
+| A002    | Ana  | ana@gmail.com  | 08191230018 | female | Jakarta |
+| A003    | Abi  | abi@gmail.com  | 08191239998 | male   | Medan   |
+| A004    | Bima | bima@gmail.com | 08666639998 | male   | Maluku  |
+| A005    | caka | caka@gmail.com | 08611111998 | male   | Bekasi  |
++---------+------+----------------+-------------+--------+---------+
+
+select name, phone, and address from table users:
+MariaDB [eduwork]> select name,phone,address from users;
++------+-------------+---------+
+| name | phone       | address |
++------+-------------+---------+
+| Ayu  | 08198890018 | Jakarta |
+| Ana  | 08191230018 | Jakarta |
+| Abi  | 08191239998 | Medan   |
+| Bima | 08666639998 | Maluku  |
+| caka | 08611111998 | Bekasi  |
++------+-------------+---------+
+
+
+
