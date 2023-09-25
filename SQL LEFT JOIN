@@ -1,0 +1,52 @@
+create database eduwork2;
+use eduwork2;
+
+create table users(
+id integer,
+email varchar(20),
+name varchar(20),
+password varchar(8),
+address varchar(20),
+role varchar(10),
+status varchar(10));
+
+insert into users values
+(001,'AYU@GMAIL.COM','AYU','AYU','JAKARTA','A','A'),
+(002,'BIMA@GMAIL.COM','BIMA','BIMA','MEDAN','B','A'),
+(003,'CHAN@GMAIL.COM','CHAN','CHAN','PALEMBANG','C','B');
+
+create table categories(
+id integer,
+user_id integer,
+code varchar(20),
+name varchar(20),
+slug varchar(8),
+description varchar(20),
+status varchar(10),
+photo varchar(10));
+
+INSERT INTO CATEGORIES VALUES
+(01,002,'CODE01','BAJU','A','DESC1','A','A'),
+(02,001,'CODE01','BAJU','A','DESC1','A','B');
+
+create table products(
+id integer,
+category_id integer,
+user_id integer,
+code varchar(20),
+name varchar(20),
+slug varchar(8),
+description varchar(20),
+photo varchar(10),
+qty double,
+unit varchar(10),
+price double,
+status varchar(10));
+
+
+INSERT INTO PRODUCTS values
+(0001,01,002,'CODE1','PRODUK1','A','B','DESC1',1,'A',1000,'B'),
+(0002,02,003,'CODE3','PRODUK2','A','B','DESC1',1,'A',1000,'B'),
+(0003,03,001,'CODE2','PRODUK4','A','B','DESC1',1,'A',1000,'B');
+
+SELECT USERS.ID, USERS.NAME, PRODUCTS.NAME FROM USERS LEFT JOIN PRODUCTS ON USERS.ID = PRODUCTS.USER_ID ORDER BY USERS.ID ASC;
